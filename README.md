@@ -24,21 +24,24 @@ O projeto utiliza um pipeline completo de pré-processamento, modelagem e análi
 
 ## 📂 Estrutura do Repositório
 
+```
 Telecom-X-Churn-Prediction/
-├── dados_transformados.csv # Dados tratados (entrada)
-├── Telecom_X2.ipynb # Notebook principal com o pipeline
-├── relatorio_churn_final.md # Relatório final com resultados e sugestões
-├── linhas_dropped_target_missing.csv # (Opcional) Linhas removidas com target inválido
-├── correlation_matrix.png # Heatmap da matriz de correlação
-├── tenure_vs_churn.png # Boxplot: tempo de contrato vs churn
-├── total_charges_vs_churn.png # Boxplot: total gasto vs churn
-├── feature_importance_rf.png # Importância das variáveis (Random Forest)
-├── coef_logistic.png # Coeficientes (Regressão Logística)
-├── cm_logistic.png # Matriz de confusão (Regressão Logística)
-├── cm_rf.png # Matriz de confusão (Random Forest)
-└── README.md # Este arquivo
+├── dados_transformados.csv             # Dados tratados (entrada)
+├── Telecom_X1.ipynb                    # Notebook principal com o pipeline
+├── relatorio_churn_final.md            # Relatório final com resultados e sugestões
+├── linhas_dropped_target_missing.csv   # (Opcional) Linhas removidas com target inválido
+├── correlation_matrix.png              # Heatmap da matriz de correlação
+├── tenure_vs_churn.png                  # Boxplot: tempo de contrato vs churn
+├── total_charges_vs_churn.png           # Boxplot: total gasto vs churn
+├── feature_importance_rf.png            # Importância das variáveis (Random Forest)
+├── coef_logistic.png                    # Coeficientes (Regressão Logística)
+├── cm_logistic.png                      # Matriz de confusão (Regressão Logística)
+├── cm_rf.png                            # Matriz de confusão (Random Forest)
+└── README.md                            # Este arquivo
+```
 
 ---
+
 ## 🚀 Como Executar
 
 ### 📋 Pré-requisitos
@@ -70,20 +73,20 @@ Telecom-X-Churn-Prediction/
 
 ---
 
-##📊 Resultados
+## 📊 Resultados
 
-###📌 Proporção de Churn
+### 📌 Proporção de Churn
 
 26.53% dos clientes evadiram
 
 ---
 
-###🏆 Modelos
+### 🏆 Modelos
 
 - **Regressão Logística: Interpretável, mas menos robusta em dados desbalanceados
 - ** Random Forest: Melhor desempenho (maior F1-score na classe churn)
 
-###🔍 Principais Fatores de Churn
+### 🔍 Principais Fatores de Churn
 
 1 **Tempo de Contrato (customer_tenure) → Menor tenure = maior churn
 2 **Total Gasto (account_Charges.Total) → Gastos altos = maior evasão
@@ -91,7 +94,7 @@ Telecom-X-Churn-Prediction/
 4 **Tipo de Contrato (Two year, One year) → Contratos longos reduzem churn
 5 **Internet (Fiber optic) → Alta taxa de churn, possivelmente por preço ou qualidade
 
-##💡 Estratégias de Retenção
+## 💡 Estratégias de Retenção
 
 - **Ofertas para novos clientes (aumentar tenure)
 - **Incentivar pagamentos automáticos
@@ -101,7 +104,7 @@ Telecom-X-Churn-Prediction/
 
 ---
 
-##📈 Visualizações
+## 📈 Visualizações
 
 - **Matriz de Correlação → Variáveis mais correlacionadas com churn
 - **Boxplots → Clientes com menor tenure e maiores gastos evadem mais
@@ -110,7 +113,7 @@ Telecom-X-Churn-Prediction/
 
 ---
 
-##🛠️ Metodologia
+## 🛠️ Metodologia
 
 🔹 Pré-processamento
 
@@ -145,7 +148,7 @@ Telecom-X-Churn-Prediction/
 
 ---
 
-##📝 Relatório Final
+## 📝 Relatório Final
 
 O relatório completo está em relatorio_churn_final.md, contendo:
 
@@ -156,7 +159,7 @@ O relatório completo está em relatorio_churn_final.md, contendo:
 
 ---
 
-##🤝 Contribuições
+## 🤝 Contribuições
 
 Contribuições são bem-vindas!
 Para sugerir melhorias:
