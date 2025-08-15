@@ -172,7 +172,7 @@ Para sugerir melhorias:
    
 ---
 
-##📧 Contato
+## 📧 Contato
 
 Para dúvidas ou sugestões, entre em contato via GitHub Issues
 
