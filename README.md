@@ -1,155 +1,176 @@
-Telecom X – Parte 2: Prevendo Churn
+# 📡 Telecom X – Parte 2: Prevendo Churn
 
-📖 Visão Geral
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Concluído-success)
+![License](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
+![Colab](https://img.shields.io/badge/Google%20Colab-Compatible-orange?logo=googlecolab)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Yes-blueviolet)
 
-Este projeto é a segunda parte do desafio Telecom X, focado na previsão de evasão de clientes (churn) utilizando técnicas de Machine Learning. O objetivo é construir e avaliar modelos preditivos para identificar clientes com alta probabilidade de churn, analisando fatores-chave que influenciam a evasão e propondo estratégias de retenção baseadas nos resultados.
-O projeto utiliza um pipeline completo de pré-processamento, modelagem e análise, implementado em Python no Google Colab, com dados tratados fornecidos no arquivo dados_transformados.csv (gerado na Parte 1 do desafio).
+## 📖 Visão Geral
+Este projeto é a **segunda parte** do desafio **Telecom X**, focado na previsão de evasão de clientes (**churn**) utilizando técnicas de **Machine Learning**.  
+O objetivo é construir e avaliar modelos preditivos para identificar clientes com alta probabilidade de churn, analisando fatores-chave que influenciam a evasão e propondo **estratégias de retenção** baseadas nos resultados.
 
-🎯 Objetivos
+O projeto utiliza um pipeline completo de pré-processamento, modelagem e análise, implementado em **Python** no **Google Colab**, com dados tratados fornecidos no arquivo `dados_transformados.csv` (gerado na Parte 1 do desafio).
 
-Pré-processamento: Limpar e preparar os dados, incluindo remoção de IDs, one-hot encoding, imputação de valores faltantes e balanceamento de classes com SMOTE.
-Análise Exploratória: Investigar proporção de churn, correlações e relações entre variáveis como tempo de contrato (customer_tenure) e total gasto (account_Charges.Total) com a evasão.
-Modelagem: Treinar dois modelos (Regressão Logística e Random Forest) para prever churn, com avaliação via métricas como acurácia, precisão, recall e F1-score.
-Interpretação: Identificar as variáveis mais importantes para o churn e propor estratégias de retenção baseadas nos insights.
+---
 
-📂 Estrutura do Repositório
+## 🎯 Objetivos
+- **Pré-processamento:** Limpar e preparar os dados (remoção de IDs, one-hot encoding, imputação de valores faltantes e balanceamento com SMOTE).
+- **Análise Exploratória:** Investigar proporção de churn, correlações e relações entre variáveis como tempo de contrato (`customer_tenure`) e total gasto (`account_Charges.Total`).
+- **Modelagem:** Treinar dois modelos (Regressão Logística e Random Forest) e avaliar por acurácia, precisão, recall e F1-score.
+- **Interpretação:** Identificar variáveis mais importantes para o churn e propor estratégias de retenção baseadas nos insights.
+
+---
+
+## 📂 Estrutura do Repositório
 
 Telecom-X-Churn-Prediction/
-├── dados_transformados.csv        # Dados tratados (entrada)
-├── Telecom_X2.ipynb               # Notebook principal com o pipeline
-├── relatorio_churn_final.md       # Relatório final com resultados e sugestões
-├── linhas_dropped_target_missing.csv  # (Opcional) Linhas removidas com target inválido
-├── correlation_matrix.png         # Heatmap da matriz de correlação
-├── tenure_vs_churn.png            # Boxplot de tempo de contrato vs churn
-├── total_charges_vs_churn.png     # Boxplot de total gasto vs churn
-├── feature_importance_rf.png      # Importância das variáveis (Random Forest)
-├── coef_logistic.png              # Coeficientes (Regressão Logística)
-├── cm_logistic.png                # Matriz de confusão (Regressão Logística)
-├── cm_rf.png                      # Matriz de confusão (Random Forest)
-└── README.md                      # Este arquivo
+├── dados_transformados.csv # Dados tratados (entrada)
+├── Telecom_X2.ipynb # Notebook principal com o pipeline
+├── relatorio_churn_final.md # Relatório final com resultados e sugestões
+├── linhas_dropped_target_missing.csv # (Opcional) Linhas removidas com target inválido
+├── correlation_matrix.png # Heatmap da matriz de correlação
+├── tenure_vs_churn.png # Boxplot: tempo de contrato vs churn
+├── total_charges_vs_churn.png # Boxplot: total gasto vs churn
+├── feature_importance_rf.png # Importância das variáveis (Random Forest)
+├── coef_logistic.png # Coeficientes (Regressão Logística)
+├── cm_logistic.png # Matriz de confusão (Regressão Logística)
+├── cm_rf.png # Matriz de confusão (Random Forest)
+└── README.md # Este arquivo
 
-🚀 Como Executar
+---
+## 🚀 Como Executar
 
-Pré-requisitos
+### 📋 Pré-requisitos
 
-Python 3.6+ (recomendado via Google Colab para compatibilidade).
-Dependências (instaladas automaticamente no notebook, se necessário):
+- **Python 3.6+** (ou executar via Google Colab)
+- Bibliotecas necessárias:
+  
+```pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn```
 
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-imbalanced-learn
+▶ Passos
 
-Para instalar localmente:
+1. Clone o repositório:
 
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
+```git clone https://github.com/<seu-usuario>/Telecom-X-Churn-Prediction.git```
 
-Passos
+2. Acesse o diretório:
 
-Clone o repositório:
+```cd Telecom-X-Churn-Prediction```
 
-git clone https://github.com/<seu-usuario>/Telecom-X-Churn-Prediction.git
+3. No Google Colab:
 
-Acesse o diretório:
+- **Faça upload do Telecom_X2.ipynb e do dados_transformados.csv
+- **Execute as células do notebook em sequência
 
-cd Telecom-X-Churn-Prediction
+4. Resultados:
 
-Carregue no Google Colab:
+- **Gráficos (PNG) e relatório final (relatorio_churn_final.md)
+- **Linhas com target inválido salvas em linhas_dropped_target_missing.csv (se houver)
 
-Faça upload do arquivo Telecom_X2.ipynb e do dados_transformados.csv no Google Colab.
-Execute as células do notebook em sequência.
+---
 
-Resultados:
-O notebook gera gráficos (salvos como PNG) e o relatório final (relatorio_churn_final.md).
-Linhas com target inválido, se houver, são salvas em linhas_dropped_target_missing.csv.
+##📊 Resultados
 
-📊 Resultados
+###📌 Proporção de Churn
 
-Proporção de Churn: Aproximadamente 26.53% dos clientes evadiram.
+26.53% dos clientes evadiram
 
-Modelos:
+---
 
-Regressão Logística: Interpretável, mas menos robusta em dados desbalanceados.
-Random Forest: Melhor desempenho (maior F1-score na classe churn).
+###🏆 Modelos
 
-Principais Fatores de Churn:
+- **Regressão Logística: Interpretável, mas menos robusta em dados desbalanceados
+- ** Random Forest: Melhor desempenho (maior F1-score na classe churn)
 
-Tempo de Contrato (customer_tenure): Clientes com menor tenure têm maior churn.
-Total Gasto (account_Charges.Total): Gastos altos associados a maior evasão.
-Método de Pagamento (Electronic check): Forte indicador de churn.
-Contrato (Two year, One year): Contratos longos reduzem churn.
-Internet (Fiber optic): Alta taxa de churn, possivelmente por preço ou qualidade.
+###🔍 Principais Fatores de Churn
 
-Estratégias de Retenção:
+1 **Tempo de Contrato (customer_tenure) → Menor tenure = maior churn
+2 **Total Gasto (account_Charges.Total) → Gastos altos = maior evasão
+3 **Método de Pagamento (Electronic check) → Forte indicador de churn
+4 **Tipo de Contrato (Two year, One year) → Contratos longos reduzem churn
+5 **Internet (Fiber optic) → Alta taxa de churn, possivelmente por preço ou qualidade
 
-Ofertas para novos clientes (aumentar tenure).
-Incentivar métodos de pagamento automáticos.
-Pacotes personalizados para usuários de fibra óptica.
-Descontos para contratos longos.
-Monitoramento proativo com o modelo Random Forest.
+##💡 Estratégias de Retenção
 
-📈 Visualizações
+- **Ofertas para novos clientes (aumentar tenure)
+- **Incentivar pagamentos automáticos
+- **Pacotes personalizados para fibra óptica
+- **Descontos para contratos longos
+- **Monitoramento proativo com o Random Forest
 
-Matriz de Correlação: Identifica variáveis mais correlacionadas com churn.
-Boxplots: Mostram que clientes com menor tenure e maiores gastos evadem mais.
-Matrizes de Confusão: Avaliam desempenho dos modelos.
-Gráficos de Importância: Destacam variáveis-chave para churn.
+---
 
-🛠️ Metodologia
+##📈 Visualizações
 
-Pré-processamento:
+- **Matriz de Correlação → Variáveis mais correlacionadas com churn
+- **Boxplots → Clientes com menor tenure e maiores gastos evadem mais
+- **Matrizes de Confusão → Avaliam desempenho dos modelos
+- **Gráficos de Importância → Destacam variáveis-chave para churn
 
-Remoção de IDs (customerID).
-One-hot encoding para variáveis categóricas.
-Imputação de valores faltantes (mediana).
-Balanceamento com SMOTE (apenas no treino).
-Padronização para Regressão Logística.
+---
 
-Análise Exploratória:
+##🛠️ Metodologia
 
-Proporção de churn.
-Matriz de correlação.
-Boxplots para customer_tenure e account_Charges.Total.
+🔹 Pré-processamento
 
-Modelagem:
+- **Remoção de IDs (customerID)
+- **One-hot encoding para variáveis categóricas
+- **Imputação de valores faltantes (mediana)
+- **Balanceamento com SMOTE (apenas no treino)
+- **Padronização para Regressão Logística
 
-Regressão Logística (com StandardScaler).
-Random Forest (200 estimadores, sem scaling).
+🔹 Análise Exploratória
 
-Avaliação:
+- **Proporção de churn
+- **Matriz de correlação
+- **Boxplots para customer_tenure e account_Charges.Total
 
-Métricas: acurácia, precisão, recall, F1-score.
-Matrizes de confusão.
+🔹 Modelagem
 
-Interpretação:
+- **Regressão Logística (com StandardScaler)
+- **Random Forest (200 estimadores, sem scaling)
 
-Importância das variáveis (Random Forest: feature_importances_; Logistic: coeficientes).
-Relatório final com insights e sugestões.
+🔹 Avaliação
 
-📝 Relatório Final
+- **Métricas: acurácia, precisão, recall, F1-score
+- **Matrizes de confusão
 
-O relatório completo está em relatorio_churn_final.md, com:
+🔹 Interpretação
 
-Resumo dos resultados.
-Fatores principais de churn.
-Análise crítica (desempenho, overfitting, underfitting).
-Sugestões estratégicas de retenção.
+- **Importância das variáveis:
+- **Random Forest: feature_importances_
+- **Regressão Logística: coeficientes
+- **Relatório final com insights e sugestões
 
-🤝 Contribuições
+---
 
-Contribuições são bem-vindas! Para sugerir melhorias:
+##📝 Relatório Final
 
-Faça um fork do repositório.
-Crie uma branch (git checkout -b feature/nova-ideia).
-Faça commit das mudanças (git commit -m 'Adiciona nova ideia').
-Envie um pull request.
+O relatório completo está em relatorio_churn_final.md, contendo:
 
-📅 Data
+- **Resumo dos resultados
+- **Fatores principais de churn
+- **Análise crítica (desempenho, overfitting, underfitting)
+- **Sugestões estratégicas de retenção
 
-Projeto finalizado em 14 de agosto de 2025.
+---
 
-📧 Contato
+##🤝 Contribuições
 
-Para dúvidas ou sugestões, entre em contato via GitHub Issues.
+Contribuições são bem-vindas!
+Para sugerir melhorias:
+
+# Faça um fork
+# Crie uma branch
+```git checkout -b feature/nova-ideia```
+# Commit das mudanças
+```git commit -m 'Adiciona nova ideia'```
+# Envie um pull request
+
+---
+
+##📧 Contato
+
+Para dúvidas ou sugestões, entre em contato via GitHub Issues
+
