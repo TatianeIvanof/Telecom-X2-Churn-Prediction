@@ -77,7 +77,7 @@ Telecom-X-Churn-Prediction/
 
 ### 📌 Proporção de Churn
 
-26.53% dos clientes evadiram
+- 26.53% dos clientes evadiram
 
 ### 🏆 Modelos
 
@@ -92,7 +92,7 @@ Telecom-X-Churn-Prediction/
 4. Tipo de Contrato (Two year, One year) → Contratos longos reduzem churn  
 5. Internet (Fiber optic) → Alta taxa de churn, possivelmente por preço ou qualidade  
 
-## 💡 Estratégias de Retenção
+### 💡 Estratégias de Retenção
 
 - Ofertas para novos clientes (aumentar tenure)
 - Incentivar pagamentos automáticos
@@ -160,15 +160,16 @@ O relatório completo está em relatorio_churn_final.md, contendo:
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas!
+
 Para sugerir melhorias:
 
-# Faça um fork
-# Crie uma branch
+1. Faça um fork
+2. Crie uma branch
 ```git checkout -b feature/nova-ideia```
-# Commit das mudanças
+3. Commit das mudanças
 ```git commit -m 'Adiciona nova ideia'```
-# Envie um pull request
-
+4. Envie um pull request
+   
 ---
 
 ##📧 Contato
