@@ -86,18 +86,11 @@ Telecom-X-Churn-Prediction/
 
 ### 🔍 Principais Fatores de Churn
 
-1 Tempo de Contrato (customer_tenure) → Menor tenure = maior churn
-2 Total Gasto (account_Charges.Total) → Gastos altos = maior evasão
-3 Método de Pagamento (Electronic check) → Forte indicador de churn
-4 Tipo de Contrato (Two year, One year) → Contratos longos reduzem churn
-5 Internet (Fiber optic) → Alta taxa de churn, possivelmente por preço ou qualidade
-
 1. Tempo de Contrato (customer_tenure) → Menor tenure = maior churn  
 2. Total Gasto (account_Charges.Total) → Gastos altos = maior evasão  
 3. Método de Pagamento (Electronic check) → Forte indicador de churn  
 4. Tipo de Contrato (Two year, One year) → Contratos longos reduzem churn  
 5. Internet (Fiber optic) → Alta taxa de churn, possivelmente por preço ou qualidade  
-
 
 ## 💡 Estratégias de Retenção
 
