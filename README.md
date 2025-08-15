@@ -79,8 +79,6 @@ Telecom-X-Churn-Prediction/
 
 26.53% dos clientes evadiram
 
----
-
 ### 🏆 Modelos
 
 - Regressão Logística: Interpretável, mas menos robusta em dados desbalanceados
